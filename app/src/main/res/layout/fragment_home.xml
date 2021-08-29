@@ -4,13 +4,52 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="i\'m here!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="32dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            >
+
+            <TextView
+                android:id="@+id/country_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="country:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/gold_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gold:"
+                app:layout_constraintStart_toStartOf="@id/country_text_view"
+                app:layout_constraintTop_toBottomOf="@id/country_text_view" />
+            <TextView
+                android:id="@+id/silver_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="silver:"
+                app:layout_constraintStart_toStartOf="@id/gold_text_view"
+                app:layout_constraintTop_toBottomOf="@id/gold_text_view" />
+
+            <TextView
+                android:id="@+id/bronze_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bronze:"
+                app:layout_constraintStart_toStartOf="@id/silver_text_view"
+                app:layout_constraintTop_toBottomOf="@id/silver_text_view" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

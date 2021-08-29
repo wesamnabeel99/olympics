@@ -8,5 +8,8 @@ object DataManager {
     fun addCountry(country: Country) {
         countriesList.add(country)
     }
+    fun returnRandomCountry():Country {
+        return countriesList[(0..92).random()]
+    }
 
 }

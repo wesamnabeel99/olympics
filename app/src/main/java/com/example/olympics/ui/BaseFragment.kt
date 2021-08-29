@@ -24,5 +24,9 @@ abstract class BaseFragment<VB:ViewBinding> :Fragment(){
         return requireNotNull(_binding).root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        addCallBacks()
+    }
     abstract fun addCallBacks()
 }
