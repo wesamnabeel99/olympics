@@ -52,6 +52,16 @@
         app:layout_constraintTop_toBottomOf="@+id/linear_layout"
         app:tint="@color/blue" />
 
+    <ImageView
+        android:id="@+id/shuffle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_shuffle_24"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toEndOf="@+id/left"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:tint="@color/blue" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
@@ -93,6 +103,72 @@
             android:layout_gravity="center"
             android:src="@drawable/winner"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort By :"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            />
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:selectionRequired="true"
+            app:checkedChip="@id/winner_chip"
+            app:singleSelection="true"
+            >
+            <com.google.android.material.chip.Chip
+                android:id="@+id/winner_chip"
+                app:chipIcon="@drawable/ic_baseline_star_rate_24"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@color/yellow"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winner"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/total_chip"
+                app:chipIconTint="@color/black"
+                app:chipIconEnabled="true"
+                app:chipIcon="@drawable/ic_baseline_filter_9_plus_24"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/gold_chip"
+                app:chipIcon="@drawable/ic_medal"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@color/light_yellow"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold"/>
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:id="@+id/silver_chip"
+                app:chipIcon="@drawable/ic_medal"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@color/light_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Silver"/>
+            <com.google.android.material.chip.Chip
+                android:id="@+id/bronze_chip"
+                app:chipIcon="@drawable/ic_medal"
+                app:chipIconEnabled="true"
+                app:chipIconTint="@color/bronze"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bronze"/>
+
+
+
+
+        </com.google.android.material.chip.ChipGroup>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

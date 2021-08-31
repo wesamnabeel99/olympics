@@ -7,7 +7,7 @@ object DataManager {
     private val countriesList  = mutableListOf<Country>()
 
     val countries : List<Country>
-        get() = countriesList
+        get() = countriesList.toList()
 
     fun addCountry(country: Country) {
         countriesList.add(country)

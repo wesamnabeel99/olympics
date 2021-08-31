@@ -3,6 +3,7 @@ package com.example.olympics.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.olympics.R
 import com.example.olympics.data.domain.Country
@@ -24,6 +25,12 @@ class CountryAdapter(var list : List<Country>):RecyclerView.Adapter<CountryAdapt
             bronzeTextView.text = currentCountry.bronze.toString()
             totalTextView.text = "Total:"+currentCountry.total.toString()
         }
+    }
+
+    fun setData(newList:List<Country>) {
+        val diffrentResult = DiffUtil.calculateDiff(CountryDiffUtil(list,newList))
+        list = newList
+        diffrentResult.dispatchUpdatesTo(this)
     }
 
     override fun getItemCount() = list.size

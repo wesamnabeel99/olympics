@@ -3,6 +3,8 @@ package com.example.olympics.ui
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.example.olympics.data.DataManager
 import com.example.olympics.databinding.FragmentHomeBinding
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -21,18 +23,50 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         binding.apply {
             right.setOnClickListener {
-                TransitionManager.beginDelayedTransition(binding.root)
-                binding.recyclerView.scrollToPosition(DataManager.countries.lastIndex)
+                scrollToPosition(DataManager.countries.lastIndex)
             }
             left.setOnClickListener {
-                TransitionManager.beginDelayedTransition(binding.root)
-                binding.recyclerView.scrollToPosition(0)
+                scrollToPosition(0)
             }
+            shuffle.setOnClickListener {
+                scrollToPosition((0..DataManager.countries.lastIndex).random())
+            }
+
+            winnerChip.setOnCheckedChangeListener { compoundButton, b ->
+                if (b) {
+                    adapter.setData(DataManager.countries)
+                }
+            }
+            totalChip.setOnCheckedChangeListener { compoundButton, b ->
+                if (b) {
+                    adapter.setData(DataManager.countries.sortedByDescending { it.total })
+                }
+            }
+            goldChip.setOnCheckedChangeListener { compoundButton, b ->
+                if (b) {
+                    adapter.setData(DataManager.countries.sortedByDescending { it.gold })
+                }
+            }
+            silverChip.setOnCheckedChangeListener { compoundButton, b ->
+                if (b) {
+                    adapter.setData(DataManager.countries.sortedByDescending { it.silver })
+                }
+            }
+            bronzeChip.setOnCheckedChangeListener { compoundButton, b ->
+                if (b) {
+                    adapter.setData(DataManager.countries.sortedByDescending { it.bronze })
+                }
+            }
+
+
         }
     }
 
+    fun scrollToPosition(position:Int) {
+        TransitionManager.beginDelayedTransition(binding.root)
+        binding.recyclerView.scrollToPosition(position)
 
-
+    }
 
 
 
