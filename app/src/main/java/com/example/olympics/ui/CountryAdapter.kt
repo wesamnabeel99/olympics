@@ -8,12 +8,11 @@ import com.example.olympics.R
 import com.example.olympics.data.domain.Country
 import com.example.olympics.databinding.ItemCountryBinding
 
-class CountryAdapter(val list : List<Country>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
+class CountryAdapter(var list : List<Country>):RecyclerView.Adapter<CountryAdapter.CountryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
     val view = LayoutInflater.from(parent.context).inflate(R.layout.item_country,parent,false)
         return CountryViewHolder(view)
     }
-
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         val currentCountry = list[position]
         holder.binding.apply {

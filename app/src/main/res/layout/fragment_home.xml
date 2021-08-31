@@ -31,16 +31,36 @@
         app:layout_constraintStart_toStartOf="@+id/olympics_logo"
         app:layout_constraintTop_toBottomOf="@+id/olympics_logo" />
 
+    <ImageView
+        android:id="@+id/right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintEnd_toEndOf="@+id/linear_layout"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:tint="@color/blue" />
+
+    <ImageView
+        android:id="@+id/left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:rotation="180"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        app:tint="@color/blue"
+        tools:layout_editor_absoluteX="16dp" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_layout">
+        app:layout_constraintTop_toBottomOf="@+id/right">
 
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -50,10 +70,9 @@
         android:id="@+id/linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_marginTop="16dp"
-        android:padding="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TextView
             android:layout_width="wrap_content"
