@@ -3,6 +3,7 @@ package com.example.olympics.ui
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.olympics.R
 import com.example.olympics.data.DataManager
@@ -62,11 +63,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             //endregion
             olympicsLogoImageView.setOnClickListener {
                 selector++
-                TransitionManager.beginDelayedTransition(binding.root)
-                if (selector%2!=0) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                when {
+                    selector%2!=0 -> {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    }
+                    else -> {
+                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                    }
                 }
             }
         }

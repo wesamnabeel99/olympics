@@ -11,7 +11,7 @@
 
     <style name="splash_screen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowSplashscreenContent" tools:targetApi="o">@drawable/splash_screen</item>
-        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:statusBarColor">@color/white</item>
     </style>
 
 </resources>
