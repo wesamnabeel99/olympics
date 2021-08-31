@@ -1,8 +1,10 @@
 package com.example.olympics.ui
 
+import android.content.SharedPreferences
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.example.olympics.R
@@ -67,6 +69,7 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
     //endregion
+
 
 
 }

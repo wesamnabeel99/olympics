@@ -10,6 +10,7 @@
     <color name="dark_red">#BA182F</color>
     <color name="light_red">#FF2444</color>
     <color name="yellow">#fab132</color>
+    <color name="always_black">#000</color>
     <color name="bronze">#CA8A1C</color>
     <color name="light_yellow">#FFC35C</color>
     <color name="green">#1b8b3b</color>

@@ -7,9 +7,10 @@
     <color name="light_gray">#CCC</color>
     <color name="red">#FF2444</color>
     <color name="yellow">#fab132</color>
+    <color name="always_black">#000</color>
     <color name="bronze">#CA8A1C</color>
     <color name="light_yellow">#FFC35C</color>
     <color name="green">#4DE679</color>
-    <color name="white">#7E7E7E</color>
-    <color name="gray_card_background">#242424</color>
+    <color name="white">#1b1b1b</color>
+    <color name="gray_card_background">#232323</color>
 </resources>

@@ -3,13 +3,14 @@ package com.example.olympics.ui
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.olympics.R
 import com.example.olympics.data.DataManager
 import com.example.olympics.databinding.FragmentHomeBinding
 import com.example.olympics.util.Properties
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
-
+    var selector = 0
     //region initialize variables
     lateinit var adapter: CountryAdapter
     override val LOG_TAG: String = "HOME_FRAGMENT"
@@ -40,27 +41,33 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
             //region chipGroup listener
             chipGroup.setOnCheckedChangeListener { group, checkedId ->
-                when {
-                    checkedId == R.id.winner_chip -> {
+                when (checkedId) {
+                    R.id.winner_chip -> {
                         adapter.updateData(DataManager.countries)
                     }
-                    checkedId == R.id.total_chip -> {
+                    R.id.total_chip -> {
                         adapter.updateData(DataManager.sortCountriesBy(Properties.TOTAL))
                     }
-                    checkedId == R.id.gold_chip -> {
+                    R.id.gold_chip -> {
                         adapter.updateData(DataManager.sortCountriesBy(Properties.GOLD))
                     }
-                    checkedId == R.id.silver_chip -> {
+                    R.id.silver_chip -> {
                         adapter.updateData(DataManager.sortCountriesBy(Properties.SILVER))
                     }
-                    checkedId == R.id.bronze_chip -> {
+                    R.id.bronze_chip -> {
                         adapter.updateData(DataManager.sortCountriesBy(Properties.BRONZE))
                     }
                 }
             }
             //endregion
             olympicsLogoImageView.setOnClickListener {
-                //setTheme(R.style.Theme_Olympics)
+                selector++
+                TransitionManager.beginDelayedTransition(binding.root)
+                if (selector%2!=0) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
             }
         }
     }
@@ -75,5 +82,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         TransitionManager.beginDelayedTransition(binding.root)
         binding.recyclerView.scrollToPosition(position)
     }
+
     //endregion
 }
