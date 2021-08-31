@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/bk/olympics/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14427083333333332" />
+        <entry key="..\:/bk/olympics/app/src/main/res/drawable/ic_baseline_fast_forward_24.xml" value="0.14427083333333332" />
+        <entry key="..\:/bk/olympics/app/src/main/res/drawable/ic_baseline_filter_9_plus_24.xml" value="0.14427083333333332" />
+        <entry key="..\:/bk/olympics/app/src/main/res/drawable/ic_baseline_shuffle_24.xml" value="0.14427083333333332" />
+        <entry key="..\:/bk/olympics/app/src/main/res/drawable/ic_baseline_star_rate_24.xml" value="0.14427083333333332" />
         <entry key="..\:/bk/olympics/app/src/main/res/drawable/splash_screen.xml" value="0.14427083333333332" />
         <entry key="..\:/bk/olympics/app/src/main/res/layout/activity_main.xml" value="0.128125" />
         <entry key="..\:/bk/olympics/app/src/main/res/layout/fragment_home.xml" value="0.22" />

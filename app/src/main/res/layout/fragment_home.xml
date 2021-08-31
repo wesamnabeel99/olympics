@@ -6,9 +6,10 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
+        android:contentDescription="@string/olympics_logo"
         android:id="@+id/olympics_logo_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/olympics_logo_image_view" />
 
     <ImageView
+        android:contentDescription="@string/fast_forward_icon"
         android:id="@+id/right"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
@@ -42,6 +44,7 @@
         app:tint="@color/blue" />
 
     <ImageView
+        android:contentDescription="@string/fast_backward_icon"
         android:id="@+id/left"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
@@ -54,6 +57,7 @@
 
     <ImageView
         android:id="@+id/shuffle"
+        android:contentDescription="@string/shuffle_icon"
         android:layout_width="@dimen/icon_size"
         android:layout_height="@dimen/icon_size"
         android:src="@drawable/ic_baseline_shuffle_24"
@@ -97,6 +101,7 @@
             app:layout_constraintTop_toBottomOf="@+id/recycler_view" />
 
         <ImageView
+            android:contentDescription="@string/olympics_winner_photo"
             android:layout_marginTop="@dimen/margin_small"
             android:layout_width="@dimen/medium_square_image"
             android:layout_height="@dimen/medium_square_image"

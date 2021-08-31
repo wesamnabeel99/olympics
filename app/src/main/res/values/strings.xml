@@ -15,4 +15,12 @@
     <string name="gold_medals">33</string>
     <string name="silver_medals">33</string>
     <string name="bronze_medals">33</string>
+    <string name="gold_medal">gold medal</string>
+    <string name="silver_medal">silver medal</string>
+    <string name="bronze_medal">bronze medal</string>
+    <string name="olympics_logo">olympics logo</string>
+    <string name="fast_forward_icon">fast forward icon</string>
+    <string name="fast_backward_icon">fast backward icon</string>
+    <string name="shuffle_icon">shuffle icon</string>
+    <string name="olympics_winner_photo">olympics winner photo</string>
 </resources>

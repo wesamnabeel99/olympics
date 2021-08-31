@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
     android:layout_width="match_parent"
@@ -66,6 +65,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rank_text_view" />
 
         <ImageView
+            android:contentDescription="@string/gold_medal"
             android:id="@+id/gold_image_view"
             android:layout_width="@dimen/medal_image_size"
             android:layout_height="@dimen/medal_image_size"
@@ -89,6 +89,7 @@
             app:layout_constraintTop_toTopOf="@+id/gold_image_view" />
 
         <ImageView
+            android:contentDescription="@string/silver_medal"
             android:id="@+id/silver_image_view"
             android:layout_width="@dimen/medal_image_size"
             android:layout_height="@dimen/medal_image_size"
@@ -112,6 +113,7 @@
             app:layout_constraintTop_toTopOf="@+id/silver_image_view" />
 
         <ImageView
+            android:contentDescription="@string/bronze_medal"
             android:id="@+id/bronze_image_view"
             android:layout_width="@dimen/medal_image_size"
             android:layout_height="@dimen/medal_image_size"

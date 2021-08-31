@@ -1,6 +1,5 @@
 package com.example.olympics.data
 
-import android.view.View
 import com.example.olympics.data.domain.Country
 import com.example.olympics.util.Properties
 
