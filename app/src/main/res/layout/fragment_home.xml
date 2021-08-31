@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/olympics_logo"
+        android:id="@+id/olympics_logo_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/olympicslogof"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_big"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--fixed size text 14dp-->
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tokyo_2020_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TOKYO 2020"
+        android:text="@string/tokyo_2020"
         android:textStyle="bold"
-        android:textSize="14dp"
+        android:textSize="@dimen/fixed_size_text"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/olympics_logo"
-        app:layout_constraintStart_toStartOf="@+id/olympics_logo"
-        app:layout_constraintTop_toBottomOf="@+id/olympics_logo" />
+        app:layout_constraintEnd_toEndOf="@+id/olympics_logo_image_view"
+        app:layout_constraintStart_toStartOf="@+id/olympics_logo_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/olympics_logo_image_view" />
 
     <ImageView
         android:id="@+id/right"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:src="@drawable/ic_baseline_fast_forward_24"
         app:layout_constraintEnd_toEndOf="@+id/linear_layout"
         app:layout_constraintTop_toBottomOf="@+id/linear_layout"
@@ -43,10 +43,10 @@
 
     <ImageView
         android:id="@+id/left"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
         android:rotation="180"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/margin_normal"
         android:src="@drawable/ic_baseline_fast_forward_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linear_layout"
@@ -54,8 +54,8 @@
 
     <ImageView
         android:id="@+id/shuffle"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
         android:src="@drawable/ic_baseline_shuffle_24"
         app:layout_constraintEnd_toStartOf="@+id/right"
         app:layout_constraintStart_toEndOf="@+id/left"
@@ -80,15 +80,15 @@
         android:id="@+id/linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/paddingNormal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tokyo_2020_text_view"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_small"
             android:text="@string/tokyo_text"
             android:textStyle="bold"
             android:textColor="@color/black"
@@ -97,18 +97,18 @@
             app:layout_constraintTop_toBottomOf="@+id/recycler_view" />
 
         <ImageView
-            android:layout_marginTop="8dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_width="@dimen/medium_square_image"
+            android:layout_height="@dimen/medium_square_image"
             android:layout_gravity="center"
             android:src="@drawable/winner"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sort By :"
+            android:text="@string/sort_by"
             android:textStyle="bold"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_size_normal"
             android:textColor="@color/blue"
             />
         <com.google.android.material.chip.ChipGroup
@@ -129,7 +129,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Winner"/>
+                android:text="@string/winner"/>
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/total_chip"
                 app:chipIconTint="@color/black"
@@ -138,7 +139,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total"/>
+                android:text="@string/total"/>
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/gold_chip"
                 app:chipIcon="@drawable/ic_medal"
@@ -147,7 +149,8 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gold"/>
+                android:text="@string/gold"/>
+
             <com.google.android.material.chip.Chip
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:id="@+id/silver_chip"
@@ -156,7 +159,8 @@
                 app:chipIconTint="@color/light_gray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Silver"/>
+                android:text="@string/silver"/>
+
             <com.google.android.material.chip.Chip
                 android:id="@+id/bronze_chip"
                 app:chipIcon="@drawable/ic_medal"
@@ -165,9 +169,7 @@
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bronze"/>
-
-
+                android:text="@string/bronze"/>
 
 
         </com.google.android.material.chip.ChipGroup>
