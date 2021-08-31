@@ -59,7 +59,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 }
             }
             //endregion
-
+            olympicsLogoImageView.setOnClickListener {
+                //setTheme(R.style.Theme_Olympics)
+            }
         }
     }
     //region functions

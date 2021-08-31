@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">olympics</string>
+    <string name="tokyo_text">Tokyo — It began with a virus and a yearlong pause. It ended with a typhoon blowing through and, still, a virus. In between: just about everything."</string>
     <string name="sort_by">Sort By :</string>
+    <string name="tokyo_2020">TOKYO 2020</string>
+    <string name="winner">Winner</string>
+    <string name="total">Total</string>
+    <string name="gold">Gold</string>
+    <string name="silver">Silver</string>
+    <string name="bronze">Bronze</string>
+    <string name="country">IRAQ</string>
+    <string name="rank_1">Rank:#1</string>
+    <string name="total_33">Total:33</string>
+    <string name="rank_by_total_2">Rank By Total:#2</string>
+    <string name="gold_medals">33</string>
+    <string name="silver_medals">33</string>
+    <string name="bronze_medals">33</string>
+    <string name="gold_medal">gold medal</string>
+    <string name="silver_medal">silver medal</string>
+    <string name="bronze_medal">bronze medal</string>
+    <string name="olympics_logo">olympics logo</string>
+    <string name="fast_forward_icon">fast forward icon</string>
+    <string name="fast_backward_icon">fast backward icon</string>
+    <string name="shuffle_icon">shuffle icon</string>
+    <string name="olympics_winner_photo">olympics winner photo</string>
 </resources>

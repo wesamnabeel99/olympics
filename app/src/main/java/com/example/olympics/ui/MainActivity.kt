@@ -1,7 +1,9 @@
 package com.example.olympics.ui
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import com.example.olympics.R
 import com.example.olympics.data.DataManager
@@ -19,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     //region onCreate function
     override fun onCreate(savedInstanceState: Bundle?) {
+
         setTheme(R.style.Theme_Olympics)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -59,8 +62,11 @@ class MainActivity : AppCompatActivity() {
      */
     private fun addFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
+
         transaction.add(R.id.fragment_container,fragment)
         transaction.commit()
     }
     //endregion
+
+
 }
