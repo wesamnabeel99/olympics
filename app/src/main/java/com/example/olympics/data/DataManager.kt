@@ -4,12 +4,13 @@ import com.example.olympics.data.domain.Country
 
 
 object DataManager {
-     val countriesList  = mutableListOf<Country>()
+    private val countriesList  = mutableListOf<Country>()
+
+    val countries : List<Country>
+        get() = countriesList
+
     fun addCountry(country: Country) {
         countriesList.add(country)
-    }
-    fun returnRandomCountry():Country {
-        return countriesList[(0..92).random()]
     }
 
 }
