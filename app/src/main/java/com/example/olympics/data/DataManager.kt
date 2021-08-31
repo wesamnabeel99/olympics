@@ -2,6 +2,7 @@ package com.example.olympics.data
 
 import com.example.olympics.data.domain.Country
 
+
 object DataManager {
     private val countriesList  = mutableListOf<Country>()
 
@@ -9,7 +10,7 @@ object DataManager {
         countriesList.add(country)
     }
     fun returnRandomCountry():Country {
-        return countriesList[(0..92).random()]
+        return countriesList[0]
     }
 
 }

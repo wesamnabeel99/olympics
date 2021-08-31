@@ -1,50 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <ImageView
+        android:id="@+id/olympics_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/olympicslogof"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="32dp"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/olympics_logo">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="16dp"
-            >
+            android:padding="16dp">
 
             <TextView
-                android:id="@+id/country_text_view"
+                android:id="@+id/country_iso_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="country:"
+                android:text="IRQ"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/rank_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Rank:#1"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/country_iso_text_view"
+                app:layout_constraintTop_toBottomOf="@id/country_iso_text_view" />
+
+            <TextView
+                android:id="@+id/total_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Total:33"
+                android:textSize="24sp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/bronze_image_view"
+                app:layout_constraintStart_toStartOf="@+id/gold_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/gold_image_view" />
+
+            <TextView
+                android:id="@+id/rank_by_total_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rank By Total:#2"
+                android:layout_marginLeft="32dp"
+                android:textColor="@color/green"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/rank_text_view"
+                app:layout_constraintStart_toEndOf="@+id/rank_text_view"
+                app:layout_constraintTop_toTopOf="@+id/rank_text_view" />
+
+            <ImageView
+                android:id="@+id/gold_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/gold"
+                app:layout_constraintEnd_toStartOf="@+id/silver_image_view"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rank_text_view" />
+
             <TextView
                 android:id="@+id/gold_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="gold:"
-                app:layout_constraintStart_toStartOf="@id/country_text_view"
-                app:layout_constraintTop_toBottomOf="@id/country_text_view" />
+                android:layout_marginTop="8dp"
+                android:text="33"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/gold_image_view"
+                app:layout_constraintStart_toStartOf="@+id/gold_image_view"
+                app:layout_constraintTop_toTopOf="@+id/gold_image_view" />
+
+            <ImageView
+                android:id="@+id/silver_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/silver"
+                app:layout_constraintBottom_toBottomOf="@+id/gold_image_view"
+                app:layout_constraintEnd_toStartOf="@+id/bronze_image_view"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/gold_image_view"
+                app:layout_constraintTop_toTopOf="@+id/gold_image_view" />
+
             <TextView
                 android:id="@+id/silver_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="silver:"
-                app:layout_constraintStart_toStartOf="@id/gold_text_view"
-                app:layout_constraintTop_toBottomOf="@id/gold_text_view" />
+                android:layout_marginTop="8dp"
+                android:text="33"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/silver_image_view"
+                app:layout_constraintStart_toStartOf="@+id/silver_image_view"
+                app:layout_constraintTop_toTopOf="@+id/silver_image_view" />
+
+            <ImageView
+                android:id="@+id/bronze_image_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bronze"
+                app:layout_constraintBottom_toBottomOf="@+id/gold_image_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/silver_image_view"
+                app:layout_constraintTop_toTopOf="@+id/gold_image_view" />
 
             <TextView
                 android:id="@+id/bronze_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="bronze:"
-                app:layout_constraintStart_toStartOf="@id/silver_text_view"
-                app:layout_constraintTop_toBottomOf="@id/silver_text_view" />
+                android:layout_marginTop="8dp"
+                android:text="33"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/bronze_image_view"
+                app:layout_constraintStart_toStartOf="@+id/bronze_image_view"
+                app:layout_constraintTop_toTopOf="@+id/bronze_image_view" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
