@@ -11,7 +11,6 @@ import com.example.olympics.databinding.FragmentHomeBinding
 import com.example.olympics.util.Properties
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
-    var selector = 0
     //region initialize variables
     lateinit var adapter: CountryAdapter
     override val LOG_TAG: String = "HOME_FRAGMENT"
@@ -61,17 +60,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 }
             }
             //endregion
-            olympicsLogoImageView.setOnClickListener {
-                selector++
-                when {
-                    selector%2!=0 -> {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                    }
-                    else -> {
-                        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                    }
-                }
-            }
+
         }
     }
     //region functions
@@ -81,7 +70,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
      * @return Unit
      * @author Wesam N. Shawqi
      */
-    fun scrollToPosition(position:Int) {
+    private fun scrollToPosition(position:Int) {
         TransitionManager.beginDelayedTransition(binding.root)
         binding.recyclerView.scrollToPosition(position)
     }
