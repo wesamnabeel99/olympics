@@ -3,12 +3,10 @@ package com.example.olympics.ui
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.example.olympics.R
 import com.example.olympics.data.DataManager
 import com.example.olympics.databinding.FragmentHomeBinding
-import com.example.olympics.util.Properties
+import com.example.olympics.util.Property
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     //region initialize variables
@@ -46,16 +44,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                         adapter.updateData(DataManager.countries)
                     }
                     R.id.total_chip -> {
-                        adapter.updateData(DataManager.sortCountriesBy(Properties.TOTAL))
+                        adapter.updateData(DataManager.sortCountriesBy(Property.TOTAL))
                     }
                     R.id.gold_chip -> {
-                        adapter.updateData(DataManager.sortCountriesBy(Properties.GOLD))
+                        adapter.updateData(DataManager.sortCountriesBy(Property.GOLD))
                     }
                     R.id.silver_chip -> {
-                        adapter.updateData(DataManager.sortCountriesBy(Properties.SILVER))
+                        adapter.updateData(DataManager.sortCountriesBy(Property.SILVER))
                     }
                     R.id.bronze_chip -> {
-                        adapter.updateData(DataManager.sortCountriesBy(Properties.BRONZE))
+                        adapter.updateData(DataManager.sortCountriesBy(Property.BRONZE))
                     }
                 }
             }

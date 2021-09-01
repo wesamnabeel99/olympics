@@ -1,6 +1,6 @@
 package com.example.olympics.util
 
-enum class Properties {
+enum class Property {
     TOTAL,
     GOLD,
     SILVER,

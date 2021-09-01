@@ -21,7 +21,7 @@ abstract class BaseFragment<VB:ViewBinding> :Fragment(){
         savedInstanceState: Bundle?
     ): View? {
         if (container != null) {
-            container.removeAllViews();
+            container.removeAllViews(); //to fix fragments stacking issue
         }
 
         _binding = bindingInflater(inflater,container,false)

@@ -1,7 +1,7 @@
 package com.example.olympics.data
 
 import com.example.olympics.data.domain.Country
-import com.example.olympics.util.Properties
+import com.example.olympics.util.Property
 
 
 object DataManager {
@@ -19,18 +19,24 @@ object DataManager {
     fun addCountry(country: Country) {
         countriesList.add(country)
     }
-    fun sortCountriesBy (property : Properties) :List<Country>
+    /**
+     * this function sort the countries descending by the giving proberty
+     * @param property : Property to sort the list by it
+     * @return List of sorted countries
+     * @author Wesam N. Shawqi
+     */
+    fun sortCountriesBy (property : Property) :List<Country>
     = when (property) {
-            Properties.TOTAL -> {
+            Property.TOTAL -> {
                 countries.sortedByDescending { it.total }
             }
-            Properties.GOLD -> {
+            Property.GOLD -> {
                 countries.sortedByDescending { it.gold }
             }
-            Properties.SILVER -> {
+            Property.SILVER -> {
                 countries.sortedByDescending { it.silver }
             }
-            Properties.BRONZE -> {
+            Property.BRONZE -> {
                 countries.sortedByDescending { it.bronze }
             }
         }
